@@ -1,0 +1,2 @@
+rootProject.name = "DimsumPlace"
+include ':app'
