@@ -1,6 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_tile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ahometiles" />
+
+        <TextView
+            android:id="@+id/title_dimsum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/im_fell_double_pica"
+            android:paddingLeft="8dp"
+            android:text="Dim sum"
+            android:textColor="@color/white"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/subtitle_dimsum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_dimsum"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/satisfy"
+            android:paddingLeft="8dp"
+            android:text="A Taste from the East"
+            android:textColor="@color/textred"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/ahomeheader2"
+            android:layout_marginRight="0dp" />
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subtitle_dimsum"
+            android:fontFamily="@font/nunito_extralight"
+            android:padding="8dp"
+            android:background="@drawable/text_backgound"
+            android:text="Dim sum is a conventional Chinese dinner comprised of little plates of dumplings and other bite dishes and is typically joined by tea. Like the way that the Spanish eat tapas, the dishes are divided between loved ones. Normally dim sum is devoured during informal breakfast hours - late morning to noon."
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/haveataste_gradiant"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@+id/details"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lemon"
+                android:text="Have a Taste!"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_tile"
+            android:background="@android:color/transparent"
+            android:layout_centerInParent="true"
+            android:paddingHorizontal="8dp"
+            android:paddingTop="35dp"
+            tools:itemCount="8"
+            tools:listitem="@layout/home_cardview" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/home_footer"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/home_recycler"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/we_bet"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/adslady"/>
+            <ImageView
+                android:id="@+id/we_horse"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/adsshark"/>
+            <ImageView
+                android:id="@+id/probit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/adslady2"/>
+            <ImageView
+                android:id="@+id/probit_horse"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/adssport"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

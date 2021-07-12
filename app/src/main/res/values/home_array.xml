@@ -1,3 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <integer-array name="array_image">
+        <item>@drawable/homeaddidas</item>
+        <item>@drawable/homeeggstarts</item>
+        <item>@drawable/homelupmpia</item>
+        <item>@drawable/homeporkbu</item>
+        <item>@drawable/homericenoddlerols</item>
+        <item>@drawable/homeshimpdum</item>
+        <item>@drawable/homesiomoy</item>
+        <item>@drawable/homesoupdu</item>
+    </integer-array>
+
+    <integer-array name="array_image_details">
+        <item>@drawable/detailsaddidashot</item>
+        <item>@drawable/detailseggtart</item>
+        <item>@drawable/detailsporkspringrolls</item>
+        <item>@drawable/detailsporkbuns</item>
+        <item>@drawable/detailsricerolls</item>
+        <item>@drawable/detailsshrimp</item>
+        <item>@drawable/detailssiomaie</item>
+        <item>@drawable/detailssoupdump</item>
+    </integer-array>
+
+    <integer-array name="array_image_detailsmain">
+        <item>@drawable/aadetails</item>
+        <item>@drawable/abdetails</item>
+        <item>@drawable/acdetails</item>
+        <item>@drawable/addetails</item>
+        <item>@drawable/aedetails</item>
+        <item>@drawable/afdetails</item>
+        <item>@drawable/agdetails</item>
+        <item>@drawable/ahdetails</item>
+    </integer-array>
+
+    <string-array name="array_content">
+        <item>@string/food1</item>
+        <item>@string/food2</item>
+        <item>@string/food3</item>
+        <item>@string/food4</item>
+        <item>@string/food5</item>
+        <item>@string/food6</item>
+        <item>@string/food7</item>
+        <item>@string/food8</item>
+    </string-array>
+
+    <string-array name="array_content_details">
+        <item>@string/food1</item>
+        <item>@string/food2</item>
+        <item>@string/food3</item>
+        <item>@string/food4</item>
+        <item>@string/food5</item>
+        <item>@string/food6</item>
+        <item>@string/food7</item>
+        <item>@string/food8</item>
+    </string-array>
+
+    <string name="food1">Chicken Feet</string>
+    <string name="food2">Egg Tart</string>
+    <string name="food3">Lumpia Shanghai</string>
+    <string name="food4">Pork Bun</string>
+    <string name="food5">Rice Noodles Roll</string>
+    <string name="food6">Shrimp Dumplings</string>
+    <string name="food7">Siomai Dumplings</string>
+    <string name="food8">Soup Dumplings</string>
+
 </resources>

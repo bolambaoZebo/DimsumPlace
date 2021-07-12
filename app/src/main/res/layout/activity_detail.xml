@@ -4,6 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blackhome"
     tools:context=".Detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/detailsaddidashot" />
+        <ImageView
+            android:id="@+id/image_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/donttry"
+            />
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
