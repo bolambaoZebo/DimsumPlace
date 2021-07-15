@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ninetysixgroup.dimsumplace.model.homeFoodModel
 import kotlinx.android.synthetic.main.activity_content.*
+import kotlinx.android.synthetic.main.popup_dialog.*
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.concurrent.schedule
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.onItemClicked {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupDialog()
+        popupAds()
         home_recycler.layoutManager = GridLayoutManager(
             this,
             2,
@@ -90,6 +92,31 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.onItemClicked {
 
     }
 
+    private fun popupAds(){
+        val url = "https://asia3we.com/"
+        val openURL = Intent(Intent.ACTION_VIEW)
+        openURL.data = Uri.parse(url)
+
+        val random = Random()
+        val imgs = getResources().obtainTypedArray(R.array.pop_random_);
+
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.popup_dialog)
+        dialog.setCancelable(false)
+        dialog.window?.setBackgroundDrawableResource(R.drawable.dialog_background)
+        dialog.background.background = resources.getDrawable(imgs.getResourceId(random.nextInt(3), -1))
+
+        dialog.img_exit.setOnClickListener{
+            dialog.dismiss()
+        }
+
+        dialog.btn_clickhere.setOnClickListener{
+            startActivity(openURL)
+        }
+
+        dialog.show();
+    }
+
     fun setupDialog(){
         dialog = AlertDialog.Builder(this)
         val dialogView = layoutInflater.inflate(R.layout.loading_dialog, null)
@@ -104,8 +131,8 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.onItemClicked {
     fun goToURL(input: String){
         val url = "https://asia3we.com/"
         val url2 = "https://www.3wehorse.com/"
-        val url3 = "https://88probett.com"
-        val url4 = "https://88prohorse.com"
+        val url3 = "https://asia3we.com"
+        val url4 = "https://www.3wehorse.com"
         val openURL = Intent(Intent.ACTION_VIEW)
 
         when (input){
@@ -137,5 +164,10 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.onItemClicked {
         if(dialogAlert.isShowing()){
             dialogAlert.dismiss()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }

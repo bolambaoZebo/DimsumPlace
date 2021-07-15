@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DimsumPlace</string>
+
+    <integer-array name="pop_random_">
+        <item>@drawable/pop1</item>
+        <item>@drawable/pop2</item>
+        <item>@drawable/pop3</item>
+        <item>@drawable/pop4</item>
+    </integer-array>
+
 </resources>
